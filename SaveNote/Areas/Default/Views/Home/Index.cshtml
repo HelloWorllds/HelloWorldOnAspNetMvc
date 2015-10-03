@@ -1,0 +1,115 @@
+﻿@{
+    ViewBag.Title = "SaveNote";
+    Layout = "~/Areas/Default/Views/Shared/_Layout.cshtml";
+}
+
+<div class="ui inverted page stackable grid masthead segment">
+    <div class="column">
+      <div class="inverted secondary pointing ui menu">
+        <div class="header item">
+            SAVENOTE
+        </div>
+        <div class="right menu">          
+          <div class="ui dropdown link item">
+            Меню
+            <i class="dropdown icon"></i>
+            <div class="menu">
+              @Html.Action("UserLogin", "Home")
+            </div>
+          </div>
+        </div>
+      </div>      
+      <img src="~/Content/images/logo.png" class="ui medium image" />
+      <div class="ui hidden transition information">
+        <h1 class="ui inverted header">
+          Универсальное хранилище
+        </h1>
+        <p>Если Вам нужно сохранить запись, ссылку на ресурс или другую информацию, просто @Html.ActionLink("войдите", "Index", "Login", null, new { @class = "my-link"}) в свой Savenote.</p>
+        <div class="large basic inverted animated fade ui button">
+          <div class="visible content">Нет аккаунта?</div>
+          <div class="hidden content">@Html.ActionLink("Зарегистрируйся!", "Register", "User", null, new { @class = "my-link"})</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui page stackable grid overview segment">
+    <div class="ui four wide column"></div>
+    <div class="sixteen wide column">
+        <h2 class="center aligned ui header header-decoration">
+          Ваша информация всегда под рукой
+        </h2>
+        <br />
+        <div class="ui stackable grid">
+            <div class="two wide column">
+                <i class="massive file text icon"></i>
+            </div>
+            <div class="six wide column">
+                <h3>Делайте записи</h3>
+                <p>Вам нужно сделать короткую заметку или у Вас появилась идея статьи, Savenote поможет Вам их сохранить.</p>
+            </div>
+            <div class="eight wide column">
+                <img src="~/Content/images/notebook.png" class="ui large image" />
+            </div>           
+        </div>
+    </div>
+  </div>
+
+  <div class="ui purple inverted page stackable grid overview segment">
+    <div class="ui four wide column"></div>
+    <div class="sixteen wide column">        
+        <div class="ui stackable grid">
+            <div class="eight wide column">
+                <img src="~/Content/images/boxes.png" class="ui large image" />
+            </div> 
+            <div class="two wide column">
+                <i class="massive archive icon"></i>
+            </div>
+            <div class="six wide column">
+                <h3>Собирайте</h3>
+                <p>Сохраняйте всю важную информацию. Сохранйте интересные ссылки, копируйте статьи и другую важную для Вас информацию.</p>
+            </div>                      
+        </div>
+    </div>
+  </div>
+
+  <div class="ui blue inverted page stackable grid overview segment">
+    <div class="ui four wide column"></div>
+    <div class="sixteen wide column">        
+        <div class="ui stackable grid">
+            <div class="two wide column">
+                <i class="massive suitcase icon"></i>
+            </div>
+            <div class="six wide column">
+                <h3>Держите все под рукой</h3>
+                <p>Вся Ваша информация доступна Вам с любого компьютера по всему миру. Просто @Html.ActionLink("войдите", "Index", "Login", null, new { @class = "my-link"}) в Ваш Savenote</p>
+            </div>
+            <div class="eight wide column">
+                <img src="~/Content/images/all_in_hand.png" class="ui large image" />
+            </div>           
+        </div>
+    </div>
+  </div>
+
+  <div class="ui inverted teal page stackable grid segment">
+    <div class="ten wide column">
+      <div class="ui three column stackable grid">
+        <div class="column">
+          <div class="ui header">Меню</div>
+          <div class="ui inverted link list">
+            @Html.Action("UserLogin", "Home")
+          </div>
+        </div>      
+      </div>
+    </div>
+    <div class="six wide right floated aligned column">
+      <h3 class="ui header">Напишите мне:</h3>
+      <addr>
+        vladimir.lysuk@gmail.com
+      </addr>
+    </div>
+    <br />
+      <div class="eight wide column">
+        Copyright &copy&nbsp Vladimir Lysuk, &nbsp2015
+      </div>    
+  </div>

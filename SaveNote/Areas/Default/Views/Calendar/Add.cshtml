@@ -1,0 +1,49 @@
+﻿@model SaveNote.Models.ViewModels.CalendarView
+
+
+
+@using (Html.BeginForm("Add", "Bookmarks", FormMethod.Post, new { @class = "ui form", id = "AddFormCalendar" }))
+{
+    <div class="ui modal" id="AddModalCalendar">
+        <i class="close icon"></i>
+        <div class="header">
+            Добавить новое событие
+        </div>
+        <div class="image content right aligned">
+            <p>
+                @Html.ValidationSummary()
+                <br />
+                <div class="inline field">
+                    <label class="ui red ribbon label">Дата события: </label>
+                    @*<div class="ui fluid icon input">
+                        
+                        <i class="calendar icon"></i>
+                    </div>*@
+                    @Html.DropDownList("Day", Model.DaySelectList, new { @class="ui mini dropdown icon button"})
+                    @Html.DropDownList("Month", Model.MonthSelectList, new { @class="ui mini dropdown icon button"})
+                    @Html.DropDownList("Year", Model.YearSelectList, new { @class="ui mini dropdown icon button"})
+                </div>
+                <br />
+                <div class="inline field">
+                    <label class="ui blue ribbon label">Время: </label>
+                    @Html.DropDownList("Hours", Model.HoursList, new { @class="ui mini dropdown icon button"})
+                    @Html.DropDownList("Minutes", Model.MinutesList, new { @class="ui mini dropdown icon button"})
+                    @*<div class="ui button" id="dddd">555</div>*@
+                </div>
+                <br />
+                <div class="inline field">
+                    <label class="ui teal ribbon label">Описание: </label>
+                    <div class="ui fluid icon input">
+                        @Html.TextBox("Description", Model.Description)
+                        <i class="info icon"></i>
+                    </div>
+                </div>
+                <br />
+            </p>            
+        </div>
+        <div class="actions">
+            <input type="submit" value="Добавить" class="ui ok blue submit button" name="enterButton"/> 
+            <div class="ui cancel button" id="onDeny">Отмена</div>
+        </div>
+    </div>
+}

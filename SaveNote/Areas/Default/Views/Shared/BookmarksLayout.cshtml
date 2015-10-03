@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+	@Styles.Render("~/Content/css/jqueryui")
+    @Styles.Render("~/Content/css")
+    @RenderSection("styles", required: false)
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="bookmarks-page-color">
+    <div class="ui left demo vertical inverted sidebar labeled icon menu">
+        
+        <a class="item" href="~/Home/Index">
+            <i class="home icon"></i>
+            Вернуться на главную
+        </a>
+        <a class="item" href="~/Notes/Index">
+            <i class="edit icon"></i>
+            Заметки
+        </a>
+        <a class="item" href="~/Bookmarks/Index">
+            <i class="bookmark icon"></i>
+            Закладки
+        </a>
+        <a class="item" href="~/Passwords/Index">
+            <i class="lock icon"></i>
+            Пароли
+        </a>
+        <a class="item" href="~/YouTubeLinks/Index">
+            <i class="video play outline icon"></i>
+            Видео
+        </a>
+        <a class="item" href="~/Calendar/Index">
+            <i class="calendar outline icon"></i>
+            Календарь событий
+        </a>
+        <a class="item" href="~/Login/Logout">
+            <i class="sign out icon"></i>
+            Выход
+        </a>
+
+    </div>
+    <div class="dimmed pusher">
+        <div class="ui stackable grid two column">
+            <div class="one wide column">
+                <a href="#" id="toggle-sidebar" class="ui inverted basic button" data-toggle=".ui.left.demo" >
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <div class="fifteen wide column">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+	@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/semantic")
+    @Scripts.Render("~/bundles/common")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

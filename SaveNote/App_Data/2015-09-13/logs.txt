@@ -1,0 +1,65 @@
+2015-09-13 00:10:26.0462|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Database 'SaveNote' already exists. Choose a different database name.
+Cannot attach the file 'D:\Itstep\программирование\ASP.NET MVC\SaveNote\SaveNote\App_Data\SaveNoteBD.mdf' as database 'SaveNote'.
+2015-09-13 00:41:01.3304|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Cannot open database "SaveNote" requested by the login. The login failed.
+Login failed for user 'Pinguin-PC\Pinguin'.
+2015-09-13 00:41:01.3304|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Cannot open database "SaveNote" requested by the login. The login failed.
+Login failed for user 'Pinguin-PC\Pinguin'.
+2015-09-13 00:41:01.3874|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Cannot open database "SaveNote" requested by the login. The login failed.
+Login failed for user 'Pinguin-PC\Pinguin'.
+2015-09-13 00:41:01.5946|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Cannot open database "SaveNote" requested by the login. The login failed.
+Login failed for user 'Pinguin-PC\Pinguin'.
+2015-09-13 00:41:01.5946|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Cannot open database "SaveNote" requested by the login. The login failed.
+Login failed for user 'Pinguin-PC\Pinguin'.
+2015-09-13 00:41:01.8866|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Cannot open database "SaveNote" requested by the login. The login failed.
+Login failed for user 'Pinguin-PC\Pinguin'.
+2015-09-13 00:41:02.3805|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Cannot open database "SaveNote" requested by the login. The login failed.
+Login failed for user 'Pinguin-PC\Pinguin'.
+2015-09-13 00:41:02.8949|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Cannot open database "SaveNote" requested by the login. The login failed.
+Login failed for user 'Pinguin-PC\Pinguin'.
+2015-09-13 00:41:03.4876|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Cannot open database "SaveNote" requested by the login. The login failed.
+Login failed for user 'Pinguin-PC\Pinguin'.
+2015-09-13 00:41:03.4976|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Cannot open database "SaveNote" requested by the login. The login failed.
+Login failed for user 'Pinguin-PC\Pinguin'.
+2015-09-13 00:41:03.4976|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Cannot open database "SaveNote" requested by the login. The login failed.
+Login failed for user 'Pinguin-PC\Pinguin'.
+2015-09-13 00:41:03.5136|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Cannot open database "SaveNote" requested by the login. The login failed.
+Login failed for user 'Pinguin-PC\Pinguin'.
+2015-09-13 00:41:03.5136|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Cannot open database "SaveNote" requested by the login. The login failed.
+Login failed for user 'Pinguin-PC\Pinguin'.
+2015-09-13 00:41:03.9577|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Cannot open database "SaveNote" requested by the login. The login failed.
+Login failed for user 'Pinguin-PC\Pinguin'.
+2015-09-13 00:41:03.9577|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Cannot open database "SaveNote" requested by the login. The login failed.
+Login failed for user 'Pinguin-PC\Pinguin'.
+2015-09-13 00:41:04.1271|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Cannot open database "SaveNote" requested by the login. The login failed.
+Login failed for user 'Pinguin-PC\Pinguin'.
+2015-09-13 02:18:38.8581|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Database 'SaveNote' already exists. Choose a different database name.
+Cannot attach the file 'D:\Itstep\программирование\ASP.NET MVC\SaveNote\SaveNote\App_Data\SaveNoteBD.mdf' as database 'SaveNote'.
+2015-09-13 03:02:08.3594|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Database 'SaveNote' already exists. Choose a different database name.
+Cannot attach the file 'D:\Itstep\программирование\ASP.NET MVC\SaveNote\SaveNote\App_Data\SaveNoteBD.mdf' as database 'SaveNote'.
+2015-09-13 03:02:08.4515|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Database 'SaveNote' already exists. Choose a different database name.
+Cannot attach the file 'D:\Itstep\программирование\ASP.NET MVC\SaveNote\SaveNote\App_Data\SaveNoteBD.mdf' as database 'SaveNote'.
+2015-09-13 03:16:13.4982|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: При выполнении текущей команды возникла серьезная ошибка.. При наличии результатов они должны быть аннулированы.
+При выполнении текущей команды возникла серьезная ошибка.. При наличии результатов они должны быть аннулированы.
+2015-09-13 03:16:14.3230|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Cannot open database "SaveNote" requested by the login. The login failed.
+Login failed for user 'Pinguin-PC\Pinguin'.
+2015-09-13 03:16:14.3687|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Подключение к серверу успешно установлено, но затем произошла ошибка при входе. (provider: Named Pipes Provider, error: 0 - С обоих концов канала отсутствуют процессы.)
+2015-09-13 03:16:14.3687|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Cannot open database "SaveNote" requested by the login. The login failed.
+Login failed for user 'Pinguin-PC\Pinguin'.
+2015-09-13 03:16:14.8520|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Cannot open database "SaveNote" requested by the login. The login failed.
+Login failed for user 'Pinguin-PC\Pinguin'.
+2015-09-13 03:16:15.3649|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Cannot open database "SaveNote" requested by the login. The login failed.
+Login failed for user 'Pinguin-PC\Pinguin'.
+2015-09-13 03:16:15.8790|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Cannot open database "SaveNote" requested by the login. The login failed.
+Login failed for user 'Pinguin-PC\Pinguin'.
+2015-09-13 03:16:16.3846|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Cannot open database "SaveNote" requested by the login. The login failed.
+Login failed for user 'Pinguin-PC\Pinguin'.
+2015-09-13 03:16:16.9282|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Database 'SaveNote' already exists. Choose a different database name.
+Cannot attach the file 'D:\Itstep\программирование\ASP.NET MVC\SaveNote\SaveNote\App_Data\SaveNoteBD.mdf' as database 'SaveNote'.
+2015-09-13 03:19:33.5686|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Database 'SaveNote' already exists. Choose a different database name.
+Cannot attach the file 'D:\Itstep\программирование\ASP.NET MVC\SaveNote\SaveNote\App_Data\SaveNoteBD.mdf' as database 'SaveNote'.
+2015-09-13 03:19:33.6266|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Database 'SaveNote' already exists. Choose a different database name.
+Cannot attach the file 'D:\Itstep\программирование\ASP.NET MVC\SaveNote\SaveNote\App_Data\SaveNoteBD.mdf' as database 'SaveNote'.
+2015-09-13 03:26:05.5626|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Database 'SaveNote' already exists. Choose a different database name.
+Cannot attach the file 'D:\Itstep\программирование\ASP.NET MVC\SaveNote\SaveNote\App_Data\SaveNoteBD.mdf' as database 'SaveNote'.
+2015-09-13 03:26:05.5776|ERROR|SaveNote.Global.Auth.CustomAuthentication|Failed authentication: Database 'SaveNote' already exists. Choose a different database name.
+Cannot attach the file 'D:\Itstep\программирование\ASP.NET MVC\SaveNote\SaveNote\App_Data\SaveNoteBD.mdf' as database 'SaveNote'.

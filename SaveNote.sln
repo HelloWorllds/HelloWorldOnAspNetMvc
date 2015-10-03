@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveNote", "SaveNote\SaveNote.csproj", "{6AB18A4F-17C9-459F-9846-B43764A5D333}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveNote.Model", "SaveNote.Model\SaveNote.Model.csproj", "{E7FECB12-E5B2-4D2B-8524-7641579095DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{83985077-256B-498A-AF5E-60245D244FB4}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AB18A4F-17C9-459F-9846-B43764A5D333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AB18A4F-17C9-459F-9846-B43764A5D333}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AB18A4F-17C9-459F-9846-B43764A5D333}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AB18A4F-17C9-459F-9846-B43764A5D333}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7FECB12-E5B2-4D2B-8524-7641579095DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7FECB12-E5B2-4D2B-8524-7641579095DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7FECB12-E5B2-4D2B-8524-7641579095DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7FECB12-E5B2-4D2B-8524-7641579095DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

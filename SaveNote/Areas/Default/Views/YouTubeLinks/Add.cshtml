@@ -1,0 +1,44 @@
+﻿@model SaveNote.Models.ViewModels.VideoView
+
+@using (Html.BeginForm("Add", "Bookmarks", FormMethod.Post, new { @class = "ui form", id = "AddFormYT" }))
+{
+    <div class="ui modal" id="AddModalYT">
+        <i class="close icon"></i>
+        <div class="header">
+            Добавить новый ролик с YouTube
+        </div>
+        <div class="image content right aligned">
+            <p>
+                @Html.ValidationSummary()
+                <br />
+                <div class="inline field">
+                    <label class="ui blue ribbon label">Название: </label>
+                    <div class="ui fluid icon input">
+                        @Html.TextBox("Name", Model.Name)
+                        <i class="tag icon"></i>
+                    </div>
+                </div>
+                <br />
+                <div class="inline field">
+                    <label class="ui teal ribbon label">Ссылка: </label>
+                    <div class="ui fluid icon input">
+                        @Html.TextBox("YTUrl", Model.YTUrl)
+                        <i class="world icon"></i>
+                    </div>
+                </div>
+                <br />
+                <div class="inline field">
+                    <label class="ui red ribbon label">Описание: </label>
+                    <div class="ui fluid icon input">
+                        @Html.TextBox("Description", Model.Description)
+                        <i class="info icon"></i>
+                    </div>
+                </div>
+            </p>            
+        </div>
+        <div class="actions">
+            <input type="submit" value="Добавить" class="ui ok blue submit button" name="enterButton"/> 
+            <div class="ui cancel button" id="onDeny">Отмена</div>
+        </div>
+    </div>
+}

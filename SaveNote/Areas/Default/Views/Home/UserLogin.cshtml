@@ -1,0 +1,19 @@
+﻿@model SaveNote.Model.User
+
+@if (Model != null)
+{
+    <span class="item">@Model.Email</span>
+    @Html.ActionLink("Заметки", "Index", "Notes", null, new { @class = "item"})
+    @Html.ActionLink("Закладки", "Index", "Bookmarks", null, new { @class = "item"})
+    @Html.ActionLink("Видео", "Index", "YouTubeLinks", null, new { @class = "item"})
+    @Html.ActionLink("Пароли", "Index", "Passwords", null, new { @class = "item"})
+    @Html.ActionLink("Календарь", "Index", "Calendar", null, new { @class = "item"})
+    @Html.ActionLink("Выход", "Logout", "Login", null, new { @class = "item"})
+    
+}
+else
+{
+    @Html.ActionLink("Вход", "Index", "Login", null, new { @class = "item"})
+    @Html.ActionLink("Регистрация", "Register", "User", null, new { @class = "item"})
+    
+}

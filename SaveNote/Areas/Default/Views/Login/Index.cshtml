@@ -1,0 +1,45 @@
+﻿@model SaveNote.Models.ViewModels.LoginView
+
+@{
+    ViewBag.Title = "Вход";
+    Layout = "~/Areas/Default/Views/Shared/LoginLayout.cshtml";
+}
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div class="ui attached message">
+  <div class="header">
+    Добро пожаловать на наш ресурс
+  </div>
+  <p>Для авторизации введите Вашу почту и пароль</p>
+</div>
+
+@using (Html.BeginForm("Index", "Login", FormMethod.Post, new { @class = "ui left floated left aligned form attached fluid segment error" }))
+{
+    @Html.ValidationSummary()
+    
+    <br />
+    <div class="inline field">
+        <label>Почта: </label>
+        <div class="ui small icon input">
+          @Html.TextBox("Email", Model.Email)
+          <i class="mail icon"></i>
+        </div>        
+    </div>
+    <div class="inline field">
+        <label>Пароль: </label>
+        <div class="ui small icon input">
+          @Html.Password("Password", Model.Password)
+          <i class="lock icon"></i>
+        </div>
+    </div>
+    <div class="inline field">
+    <input type="submit" value="Войти" class="ui blue submit button" name="enterButton"/>
+    @Html.ActionLink("Вернуться на главную", "Index", "Home", null, new { @class = "ui green inverted button"})
+    </div>
+}

@@ -1,0 +1,37 @@
+﻿@model SaveNote.Models.ViewModels.NotesView
+
+@{
+    ViewBag.Title = "Редакор заметок";
+    Layout = "~/Areas/Default/Views/Shared/NotesLayout.cshtml";
+}
+
+<div class="ui stackable grid two column">
+    <div class="two wide column"></div>
+    <div class="ten wide column">
+        @using (Html.BeginForm("Edit", "Notes", FormMethod.Post, new { @class = "" }))
+        {
+            @Html.ValidationSummary()
+            
+            <div class="inline field">
+                <label>Название заметки: </label>
+                <div class="ui fluid icon input">
+                  @Html.TextBox("EditName", Model.Name, new { @readonly="readonly" })
+                  <i class="tag icon"></i>
+                </div>        
+            </div>
+            <br />
+    
+            <div class="inline field">
+                <div class="ui fluid icon input">
+                  @Html.TextArea("EditEditor", Model.Content)
+                </div>        
+            </div>
+            
+            <br />    
+            <div class="inline field">
+                <input type="button" value="Сохранить" class="ui blue button" id="EditNotes"/>
+                @Html.ActionLink("Назад", "Index", "Notes", null, new { @class = "ui green button"})
+            </div>
+        }
+    </div>
+</div>

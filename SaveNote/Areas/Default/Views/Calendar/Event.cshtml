@@ -1,0 +1,27 @@
+﻿@model SaveNote.Models.Info.PageableData<SaveNote.Model.Calendar>
+
+<table id="productsTable" class="ui very basic table">
+    <thead>
+        <tr>
+            @*<th></th>*@
+            <th style="width: 200px  !important"><i class="big wait icon"></i></th>
+            <th style="width: 100%"><i class="big calendar icon"></i></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var role in Model.List)
+        {
+            <tr>
+                @*<td>
+                    <input type="radio" class="radio" name="radiot" value="@role.ID" />
+                </td>*@
+                <td>
+                    @role.Time.ToShortTimeString()
+                </td>
+                <td>
+                    @role.Description
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

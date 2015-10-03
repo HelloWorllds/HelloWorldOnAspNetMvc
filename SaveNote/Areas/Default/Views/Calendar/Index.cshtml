@@ -1,0 +1,86 @@
+﻿@model SaveNote.Models.Info.PageableData<SaveNote.Model.Calendar>
+
+@{
+    ViewBag.Title = "Список дел";
+    Layout = "~/Areas/Default/Views/Shared/CalendarLayout.cshtml";
+}
+
+
+@using (Ajax.BeginForm("Events", "Calendar", new AjaxOptions
+{
+    HttpMethod = "Post",
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "productsTable"
+}))
+{
+    <input name="date" type="hidden" id="dateID"/>
+    @*<input id="datepicker" type="text" name="date"/>*@    
+    <input type="submit" value="Показать список событий" id="calendarSubmit" style="display: none"/>
+}
+
+<div class="ui stackable grid one column">
+    <div class="column">
+        <table id="productsTable"  class="ui very basic table">
+            <thead>
+                <tr>
+                    @*<th></th>*@
+                    <th style="width: 200px  !important"><i class="big wait icon"></i></th>
+                    <th style="width: 100%"><i class="big calendar icon"></i></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var role in Model.List)
+                {
+                    <tr>
+                        @*<td>
+                            <input type="radio" class="radio" name="radioCalendar" value="@role.ID" />
+                        </td>*@
+                        <td>
+                            @role.Time.ToShortTimeString()
+                        </td>
+                        <td>
+                            @role.Description
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+@Html.Partial("Add", new SaveNote.Models.ViewModels.CalendarView())
+
+<div class="ui basic modal" id="DelModalCalendar">
+    <div class="header">
+        <h2 class="ui center aligned icon header">
+            <i class="big trash outline icon"></i>
+            Удалить?
+        </h2>
+    </div>
+    <div class="content">
+        <div class="description">
+            Вы уверены, что хотите выполнить это действие?
+        </div>
+    </div>
+    <div class="actions">
+        <input type="submit" value="Удалить" class="ui ok inverted red submit basic button" name="enterButton"/>
+        <div class="ui inverted green button">Отмена</div>
+    </div>
+</div>
+
+<div class="ui basic modal" id="EmptyModalCalendar">
+    <div class="header">
+        <h2 class="ui center aligned icon header">
+            <i class="big warning icon"></i>            
+        </h2>
+    </div>
+    <div class="content">
+        <div class="description">
+            Вы не выбрали запись для удаления!
+        </div>
+    </div>
+    <div class="actions">
+        <div class="ui inverted green button">Отмена</div>
+    </div>
+</div>

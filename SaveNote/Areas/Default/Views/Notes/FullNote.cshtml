@@ -1,0 +1,50 @@
+﻿@model SaveNote.Model.Notes
+
+@Styles.Render("~/Content/css")
+
+@{
+    ViewBag.Title = "Заметки";
+}
+
+@using (Html.BeginForm("ViewFullModal", "Notes", FormMethod.Get))
+{
+    @*<div class="ui modal" id="FullModalNote">
+        <div class="header">
+            <h2 class="ui center aligned header">
+                @Model.Name
+            </h2>
+        </div>
+        <div class="content">
+            <div class="description">
+                @Html.Raw(@Model.Content)
+            </div>
+        </div>
+        <div class="actions">
+            <div class="ui green button">Закрыть</div>
+        </div>
+    </div>*@
+    
+    
+    <div class="ui stackable grid two column">
+        <div class="two wide column"></div>
+        <div class="ten wide column">
+            <div class="header">
+                <h2 class="ui center aligned header">
+                    @Model.Name
+                </h2>
+            </div>
+            <div class="ui horizontal divider header">
+                <i class="book icon"></i>
+            </div>
+            @Html.Raw(@Model.Content)
+            <br />
+            <div class="ui horizontal divider header">
+                <i class="checkered flag icon"></i>
+            </div>
+            <a class="tiny ui right labeled icon blue button" href="/Notes">
+                <i class="remove icon"></i>
+                Закрыть
+            </a>
+        </div>
+    </div>
+}

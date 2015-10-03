@@ -1,0 +1,36 @@
+﻿@model SaveNote.Models.ViewModels.BookmarkView
+
+@using (Html.BeginForm("Add", "Bookmarks", FormMethod.Post, new { @class = "ui form", id = "AddFormBM" }))
+{
+    <div class="ui modal" id="AddModalBM">
+        <i class="close icon"></i>
+        <div class="header">
+            Добавить новую закладку
+        </div>
+        <div class="image content right aligned">
+            <p>
+                @Html.ValidationSummary()
+                <br />
+                <div class="inline field">
+                    <label class="ui red ribbon label">Название ресурса: </label>
+                    <div class="ui fluid icon input">
+                        @Html.TextBox("Name", Model.Name)
+                        <i class="tag icon"></i>
+                    </div>
+                </div>
+                <br />
+                <div class="inline field">
+                    <label class="ui blue ribbon label">Ссылка: </label>
+                    <div class="ui fluid icon input">
+                        @Html.TextBox("Url", Model.Url)
+                        <i class="info icon"></i>
+                    </div>
+                </div>
+            </p>            
+        </div>
+        <div class="actions">
+            <input type="submit" value="Добавить" class="ui ok blue submit button" name="enterButton"/> 
+            <div class="ui cancel button" id="onDeny">Отмена</div>
+        </div>
+    </div>
+}

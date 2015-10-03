@@ -1,0 +1,67 @@
+﻿@model SaveNote.Models.ViewModels.UserView
+
+@{
+    ViewBag.Title = "Регистрация";
+    Layout = "~/Areas/Default/Views/Shared/RegLayout.cshtml";
+}
+
+<div class="ui attached message">
+  <div class="header">
+    Добро пожаловать на наш ресурс
+  </div>
+  <p>Для регистрации нового пользователя, заполните все поля</p>
+</div>
+
+@using (Html.BeginForm("Register", "User", FormMethod.Post, new { @class = "ui left floated left aligned form attached fluid segment error" }))
+{
+    @Html.ValidationSummary()
+    <div class="ui success message" id="success-div" style="display:none;">
+        <div class="header">Вы успешно зарегистрировались. </div>
+        <p>Вы можете авторизоваться под вашим выбранным именем пользователя</p>
+    </div>
+    <br />
+    <div class="inline field">
+        <label>Почта: </label>
+        <div class="ui small icon input">
+          @Html.TextBox("Email", Model.Email)
+          <i class="mail icon"></i>
+        </div>        
+    </div>
+    <div class="inline field">
+        <label>Пароль: </label>
+        <div class="ui small icon input">
+          @Html.Password("Password", Model.Password)
+          <i class="lock icon"></i>
+        </div>
+    </div>
+    <div class="inline field">
+        <label>Повторите пароль: </label>
+        <div class="ui small icon input">
+          @Html.Password("ConfirmPassword", Model.ConfirmPassword)
+          <i class="lock icon"></i>
+        </div>
+    </div>
+    <div class="inline field">
+        <label>Дата рождения: </label>
+        @Html.DropDownList("BirthdateDay", Model.BirthdateDaySelectList, new { @class="ui mini dropdown icon button"})
+        @Html.DropDownList("BirthdateMonth", Model.BirthdateMonthSelectList, new { @class="ui mini dropdown icon button"})
+        @Html.DropDownList("BirthdateYear", Model.BirthdateYearSelectList, new { @class="ui mini dropdown icon button"})
+    </div>
+    <div class="field">
+        <br />
+        <div class="field">
+            <img src="@Url.Action("Captcha", "User")" alt="captcha" />
+            <div class="inline field">
+                <label>Введите символы, которые видите: </label>
+                <div class="ui small icon input">
+                    @Html.TextBox("Captcha", Model.Captcha)
+                    <i class="bug icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="inline field">
+    <input type="submit" value="Регистрация" class="ui blue submit button" name="submitButton"/>
+    @Html.ActionLink("Вернуться на главную", "Index", "Home", null, new { @class = "ui green inverted button"})
+    </div>
+}

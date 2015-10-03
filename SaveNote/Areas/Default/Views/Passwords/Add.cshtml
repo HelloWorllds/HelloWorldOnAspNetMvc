@@ -1,0 +1,49 @@
+﻿@model SaveNote.Models.ViewModels.PasswordsView
+
+
+@using (Html.BeginForm("Add", "Passwords", FormMethod.Post, new { @class = "ui form", id = "AddForm" }))
+{
+    <div class="ui modal" id="AddModal">
+        <i class="close icon"></i>
+        <div class="header">
+            Добавить новую запись
+        </div>
+        <div class="image content right aligned">
+            <p>
+                @Html.ValidationSummary()
+                <br />
+                <div class="inline field">
+                    <label class="ui red ribbon label">Название ресурса: </label>
+                    <div class="ui fluid icon input">
+                        @Html.TextBox("Resource", Model.Resource)
+                        <i class="world icon"></i>
+                    </div>
+                </div>
+                <br />
+                <div class="inline field">
+                    <label class="ui blue ribbon label">Логин: </label>
+                    <div class="ui fluid icon input">
+                        @Html.TextBox("Login", Model.Login)
+                        <i class="user icon"></i>
+                    </div>
+                </div>
+                <br />
+                <div class="inline field">
+                    <label class="ui teal ribbon label">Пароль: </label>
+                    <div class="ui icon input">
+                        @Html.TextBox("Password", Model.Password)
+                        <i class="lock icon"></i>
+                    </div>
+                    <div class="ui input">
+                        <input type="number" min="6" max="16" id="passwlen" />
+                    </div>
+                    <div class="ui blue button" id="gen">Сгенерировать пароль</div>
+                </div>
+            </p>            
+        </div>
+        <div class="actions">
+            <input type="submit" value="Добавить" class="ui ok blue submit button" name="enterButton"/> 
+            <div class="ui cancel button" id="onDeny">Отмена</div>
+        </div>
+    </div>
+}

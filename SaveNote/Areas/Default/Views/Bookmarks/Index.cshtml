@@ -1,0 +1,107 @@
+﻿@model SaveNote.Models.Info.PageableData<SaveNote.Model.Bookmarks>
+
+@{
+    ViewBag.Title = "Закладки";
+    Layout = "~/Areas/Default/Views/Shared/BookmarksLayout.cshtml";
+}
+
+
+<div class="ui stackable grid two column">
+    <div class="one wide column">
+        <div class="ui secondary vertical icon inverted menu">
+            <a class="item"  id="AddBookmark" data-toggle="#AddModalBM">
+                <i class="big add circle icon"></i>
+            </a>
+        </div>
+    </div>
+    <div class="fifteen wide column">
+        <div class="ui relaxed stackable grid">
+            <div class="four column row">
+                @{
+                    int counter = 0;
+            
+                    foreach (var note in Model.List)
+                    {
+                        <div class="column">
+                            <div class="ui link cards">
+                                <div class="card bookmark-size">
+                                    <div class="image">                                            
+                                        <a href="@note.Url" id="BookmarkImage">
+                                            <img src="http://mini.s-shot.ru/?@note.Url" class="bookmark-image-size"/>                                                                                               
+                                        </a>
+				                        <a class="DelBookmarkLink" id="@note.ID" data-toggle="#DelModalBM"><i class="right floated big remove icon"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        counter++;
+                        if (counter%4 == 0)
+                        { 
+                            <div class="ui relaxed grid">
+                                <div class="four column row">
+                                    <div class="column"></div>
+                                    <div class="column"></div>
+                                    <div class="column"></div>
+                                    <div class="column"></div>
+                                </div>
+                                <div class="four column row">
+                                    <div class="column"></div>
+                                    <div class="column"></div>
+                                    <div class="column"></div>
+                                    <div class="column"></div>
+                                </div>
+                                <div class="four column row">
+                                    <div class="column"></div>
+                                    <div class="column"></div>
+                                    <div class="column"></div>
+                                    <div class="column"></div>
+                                </div>
+                            </div>
+                        }
+                    }
+                }
+            </div>
+        </div>        
+    </div>
+</div>
+
+<div class="ui bottom fixed borderless inverted menu">
+    @Html.PageLinks(Model.PageNo, Model.CountPage, x => Url.Action("Index", new {page = x}))
+</div>
+
+
+@Html.Partial("Add", new SaveNote.Models.ViewModels.BookmarkView())
+
+<div class="ui basic modal" id="DelModalBM">
+    <div class="header">
+        <h2 class="ui center aligned icon header">
+            <i class="big trash outline icon"></i>
+            Удалить?
+        </h2>
+    </div>
+    <div class="content">
+        <div class="description">
+            Вы уверены, что хотите выполнить это действие?
+        </div>
+    </div>
+    <div class="actions">
+        <input type="submit" value="Удалить" class="ui ok inverted red submit basic button" name="enterButton"/>
+        <div class="ui inverted green button">Отмена</div>
+    </div>
+</div>
+
+<div class="ui basic modal" id="EmptyModalBM">
+    <div class="header">
+        <h2 class="ui center aligned icon header">
+            <i class="big warning icon"></i>            
+        </h2>
+    </div>
+    <div class="content">
+        <div class="description">
+            Вы не выбрали запись для удаления!
+        </div>
+    </div>
+    <div class="actions">
+        <div class="ui inverted green button">Отмена</div>
+    </div>
+</div>

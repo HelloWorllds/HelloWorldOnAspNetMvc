@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Регистрация";
+    Layout = "~/Areas/Default/Views/Shared/RegLayout.cshtml";
+}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="ui left floated left aligned form attached fluid segment error">
+    <div class="ui success message">
+        <div class="header">Вы успешно зарегистрировались. </div>
+        <p></p>
+        <p>Вы можете авторизоваться под вашим выбранным именем пользователя</p>
+        <p>Либо вернуться на глаавную страничку</p>
+    </div>
+    <br />
+    <div class="inline field center aligned">
+        @Html.ActionLink("Войти", "Index", "Home", null, new { @class = "ui blue inverted button"})
+        @Html.ActionLink("Вернуться на главную", "Index", "Home", null, new { @class = "ui green inverted button"})
+    </div>
+</div>

@@ -1,0 +1,109 @@
+﻿@model SaveNote.Models.Info.PageableData<SaveNote.Model.Notes>
+
+@{
+    ViewBag.Title = "Заметки";
+    Layout = "~/Areas/Default/Views/Shared/NotesLayout.cshtml";
+    
+}
+
+@{
+    
+    <div class="ui stackable grid two column">
+        <div class="one wide column">
+            <div class="ui secondary vertical icon menu">
+                <a class="item" href="~/Notes/Add" id="NewNote">
+                    <i class="big add circle icon"></i>
+                </a>
+            </div>
+        </div>
+        <div class="fourteen wide column">
+            <div class="ui relaxed stackable grid">
+                <div class="four column row">
+                    @{
+                        int counter = 0;
+            
+                        foreach (var note in Model.List.Reverse())
+                        {
+                            if (note.UserID == ViewBag.ID)
+                            {
+                                <div class="column">
+                                    <div class="ui card">
+                                        <div class="content">
+                                            <div class="header">@note.Name</div>
+                                            @note.AddedDate.ToShortDateString()
+                                            <div class="ui divider"></div>
+                                            <div class="description">
+                                                @Html.Raw(@WebExtensions.Teaser(note.Content, 300, "......."))
+                                            </div>
+                                        </div>                                    
+                                        <div class="ui three bottom attached buttons">
+                                            <a class="ui green button EditNote" id="@note.Name" name="@note.Content" href="~/Notes/Edit">
+                                                <i class="write icon"></i>
+                                            </a>
+                                            <a class="ui primary button FullNote" href="@Url.Action("ViewFullModal", "Notes", new { id = note.ID })">
+                                                <i class="expand icon"></i>
+                                            </a>
+                                            @*@Html.ActionLink("ссылка", "ViewFullModal", "Notes", new { id = note.ID }, new { @class = "ui primary button FullNote" })*@
+                                            <div class="ui red button DelNote" id="@note.ID">
+                                                <i class="trash outline icon"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                counter++;
+                                if (counter%4 == 0)
+                                {
+                                    <div class="ui relaxed grid">
+                                        <div class="four column row">
+                                            <div class="column"></div>
+                                            <div class="column"></div>
+                                            <div class="column"></div>
+                                            <div class="column"></div>
+                                        </div>
+                                        <div class="four column row">
+                                            <div class="column"></div>
+                                            <div class="column"></div>
+                                            <div class="column"></div>
+                                            <div class="column"></div>
+                                        </div>
+                                        <div class="four column row">
+                                            <div class="column"></div>
+                                            <div class="column"></div>
+                                            <div class="column"></div>
+                                            <div class="column"></div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        }
+                    }
+                </div>
+            </div>        
+        </div>
+    </div>
+
+    <div class="ui bottom fixed borderless inverted menu">
+        @Html.PageLinks(Model.PageNo, Model.CountPage, x => Url.Action("Index", new {page = x}))
+    </div>@*
+    
+    
+    @Html.Partial("FullNote", new SaveNote.Model.Notes())
+    
+    *@<div class="ui basic modal" id="DelModalNote">
+    <div class="header">
+        <h2 class="ui center aligned icon header">
+            <i class="big trash outline icon"></i>
+            Удалить?
+        </h2>
+    </div>
+    <div class="content">
+        <div class="description">
+            Вы уверены, что хотите выполнить это действие?
+        </div>
+    </div>
+    <div class="actions">
+        <input type="submit" value="Удалить" class="ui ok inverted red submit basic button" name="enterButton"/>
+        <div class="ui inverted green button">Отмена</div>
+    </div>
+</div>
+}

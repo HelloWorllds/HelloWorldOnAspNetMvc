@@ -1,0 +1,96 @@
+﻿@model SaveNote.Models.Info.PageableData<SaveNote.Model.Passwords>
+
+@{
+    ViewBag.Title = "Пароли";
+    Layout = "~/Areas/Default/Views/Shared/NotesLayout.cshtml";
+}
+
+<div class="ui stackable grid two column">
+    <div class="one wide column">
+        <div class="ui secondary vertical icon menu">
+            <a class="item" id="toggle-modal" data-toggle=".ui.modal">
+                <i class="big add circle icon"></i>
+            </a>
+            <a class="item" id="toggle-del-modal" data-toggle="#DelModal">
+                <i class="big trash outline icon"></i>
+            </a>
+        </div>
+    </div>
+    <div class="fifteen wide column">
+        <table class="ui selectable striped blue table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Название ресурсса</th>
+                    <th>Логин</th>
+                    <th>Пароль</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var note in Model.List.Reverse())
+                {
+                    <tr>
+                        <td>
+                            <input type="radio" class="radio" name="radiot" value="@note.ID" />
+                        </td>
+                        <td>
+                            @note.Resource
+                        </td>
+                        <td>
+                            @note.Login
+                        </td>
+                        <td>
+                            @note.Password
+                        </td>
+                    </tr> 
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="4">
+                        <div class="ui right floated borderless pagination menu">
+                            @Html.PageLinks(Model.PageNo, Model.CountPage, x => Url.Action("Index", new {page = x}))
+                        </div>
+                    </th>
+                </tr>                
+            </tfoot>
+        </table>        
+    </div>
+</div>
+
+
+@Html.Partial("Add", new SaveNote.Models.ViewModels.PasswordsView())
+
+<div class="ui basic modal" id="DelModal">
+    <div class="header">
+        <h2 class="ui center aligned icon header">
+            <i class="big trash outline icon"></i>
+            Удалить?
+        </h2>
+    </div>
+    <div class="content">
+        <div class="description">
+            Вы уверены, что хотите выполнить это действие?
+        </div>
+    </div>
+    <div class="actions">
+        <input type="submit" value="Удалить" class="ui ok inverted red submit basic button" name="enterButton"/>
+        <div class="ui inverted green button">Отмена</div>
+    </div>
+</div>
+
+<div class="ui basic modal" id="EmptyModal">
+    <div class="header">
+        <h2 class="ui center aligned icon header">
+            <i class="big warning icon"></i>            
+        </h2>
+    </div>
+    <div class="content">
+        <div class="description">
+            Вы не выбрали запись для удаления!
+        </div>
+    </div>
+    <div class="actions">
+        <div class="ui inverted green button">Отмена</div>
+    </div>
+</div>

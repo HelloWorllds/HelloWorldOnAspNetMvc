@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>SemanticUI</id>
+    <version>1.3.2.1</version>
+    <title>Semantic UI</title>
+    <authors>jack@semantic-ui.com</authors>
+    <owners>jack@semantic-ui.com</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Semantic is a highly-themable UI framework with naming conventions built around common usage.</description>
+    <releaseNotes>1.3.2 from http://semantic-ui.com/</releaseNotes>
+  </metadata>
+</package>
